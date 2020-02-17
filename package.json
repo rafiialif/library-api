@@ -7,22 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./app.js"
   },
-  "engines": {
-    "node": "12.x"
-  },
   "author": "LearnIT",
   "license": "ISC",
   "dependencies": {
-    "cookie-parser": "1.4.4",
-    "cors": "2.8.5",
-    "express": "4.17.1",
-    "http-errors": "1.7.3",
-    "mongoose": "5.8.3",
-    "morgan": "1.9.1",
-    "path": "0.12.7"
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "mongoose": "^5.8.3",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "mocha": "7.0.0",
-    "nyc": "15.0.0"
+    "mocha": "^7.0.0",
+    "nyc": "^15.0.0"
   }
 }

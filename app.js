@@ -14,11 +14,11 @@ const routes = require('./routes/Routes');
 const app = express();
 
 //  TODO: Tambahkan variabel DB yang berasal dari file /config/Config
-// mongoose.connect([tambah disini], {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useFindAndModify: false
-// });
+mongoose.connect(config.DB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+});
 
 app.use(cors());  //enable cors
 
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // TODO: Tambahkan definisi path untuk API agar API dapat diakses dengan 
 // path `/library`
-// app.use([tambah disini], routes);
+app.use('/library', routes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -46,7 +46,7 @@ app.use((err, req, res) => {
 });
 
 //  Tambahkan variabel APP_PORT yang berasal dari file /config/Config
-app.listen(/* APP_PORT */);
+app.listen(config.APP_PORT);
 
 
 module.exports = app;
